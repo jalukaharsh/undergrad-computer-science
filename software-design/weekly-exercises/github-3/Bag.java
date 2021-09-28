@@ -34,7 +34,7 @@ public abstract class Bag {
         this.color = colour;
         this.numberOfContents = 0;
         this.capacity = cap;
-        this.contents = new String[0];
+        this.contents = new String[cap - 1];
     }
 
     /*
@@ -118,6 +118,13 @@ public abstract class Bag {
      */
     public void increaseCapacity(int n) {
         this.capacity = this.capacity + n;
+        String[] new_contents = new String[this.capacity];
+        int i = 0;
+        for (String content : this.contents) {
+            new_contents[i] = this.contents[i];
+            i = i + 1;
+        }
+        this.contents = new_contents;
     }
 
     /**
