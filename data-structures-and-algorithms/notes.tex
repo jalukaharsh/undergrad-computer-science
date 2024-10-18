@@ -25,7 +25,7 @@
 
 \title{CSC263: Data Structures and Analysis - Notes}
 \author{Harsh Jaluka}
-\date{Feb 2022}
+\date{\today}
 
 \begin{document}
 
@@ -675,9 +675,9 @@ Take-away:
 \subsection{Running-time analysis}
 \textbf{Upper bound}: We will count the number of comparisons in line 15. 
 
-Note that each element of $S$ is pivot at most once and at most all other elements are compared to the pivot. So, every pair is compared at most once and there are ${n \choose 2}$ pairs if $|S| = n$. Hence, 
+Note that each element of $S$ is pivot at most once and at most all other elements are compared to the pivot. So, every pair is compared at most once and there are $\binom{n}{2}$ pairs if $|S| = n$. Hence, 
 \begin{align*}
-    T(n) \leq {n \choose 2} \in \mathcal{O}(n^2)
+    T(n) \leq \binom{n}{2} \in \mathcal{O}(n^2)
 \end{align*}
 
 \textbf{Lower bound}: We will use the family of inputs of \texttt{[n, n-1, n-2, $\cdots$, 2, 1]}. 
